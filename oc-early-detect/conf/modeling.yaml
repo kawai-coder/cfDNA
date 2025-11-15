@@ -1,0 +1,30 @@
+random_seed: 17
+splits:
+  strategy: group_kfold
+  groups_column: study_id
+  test_fraction: 0.2
+  val_fraction: 0.2
+features:
+  fragmentomics:
+    path: data/interim/fragment_features.parquet
+    enabled: true
+  methylation:
+    path: data/interim/methyl_features.parquet
+    enabled: true
+models:
+  logistic_regression:
+    penalty: l2
+    c: 1.0
+  lightgbm:
+    num_leaves: 31
+    learning_rate: 0.05
+    n_estimators: 500
+  transformer:
+    max_tokens: 4096
+    d_model: 256
+    n_layers: 6
+    n_heads: 8
+thresholding:
+  specificity_target: 0.99
+external_eval:
+  dataset_key: external_validation
