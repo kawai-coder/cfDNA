@@ -1,0 +1,31 @@
+name: oc-early-detect
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python>=3.10
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - xgboost
+  - lightgbm
+  - matplotlib
+  - pyarrow
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cudatoolkit
+  - samtools
+  - bedtools
+  - pip
+  - pip:
+      - rich
+      - typer
+      - hydra-core
+      - pyyaml
+      - tqdm
+      - seaborn

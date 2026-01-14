@@ -1,0 +1,20 @@
+gse71378:
+  accession: GSE71378
+  assay: cfDNA 5hmC
+  label_column: disease_status
+  positive_label: cancer
+  negative_label: control
+  notes: >-
+    Requires SRA download and per-sample metadata harmonization.
+finaledb:
+  release: v1.0
+  assay: WGS fragmentomics
+  label_column: pathology
+  positive_label: ovarian_cancer
+  negative_label: healthy
+  notes: >-
+    FinaleDB exports feature matrices for fragment lengths and motifs.
+external_validation:
+  source: to-be-determined
+  usage: held-out external test set
+  notes: Independent validation dataset referenced in Issue 12.
